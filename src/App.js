@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.scss';
 
+
 function App() {
 
   const [src, setSrc] = useState([]);
@@ -11,12 +12,6 @@ function App() {
   const [HOFNum, setHOFNum] = useState(0);
   const [HSMNum, setHSMNum] = useState(0);
   const [HSFNum, setHSFNum] = useState(0);
-  console.log('HOMNum', HOMNum);
-  console.log('HOFNum', HOFNum);
-  console.log('HSMNum', HSMNum);
-  console.log('HSFNum', HSFNum);
-
-
 
   useEffect(() => {
     fetch("https://www.ris.gov.tw/rs-opendata/api/v1/datastore/ODRP019/106")
@@ -92,9 +87,15 @@ function App() {
             })}
           </select>
         </div>
+        <div className="chartArea">
+        </div>
       </div>
     </>
   );
 }
 
+
+
 export default App;
+
+
